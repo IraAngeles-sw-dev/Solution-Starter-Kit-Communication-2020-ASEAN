@@ -17,8 +17,7 @@ In this tutorial, you will:
 
 ## Prerequisite
 
-- Register for an [IBM Cloud](https://ibm.biz/BdqfRf) account.
-- [GitHub](https://github.com/) account for code repository
+- Register for an [IBM Cloud](https://ibm.biz/BdqfRf) account
 - Download the code from this GitHub [repository](https://github.com/IraAngeles-IBM/Solution-Starter-Kit-Communication-2020-ASEAN)
 
 ## Estimated time
