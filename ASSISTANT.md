@@ -17,7 +17,7 @@ In this tutorial, you will:
 
 ## Prerequisite
 
-- Register for an [IBM Cloud](https://www.ibm.com/account/reg/us-en/signup?formid=urx-42793&eventid=cfc-2020?cm_mmc=OSocial_Blog-_-Audience+Developer_Developer+Conversation-_-WW_WW-_-cfc-2020-ghub-starterkit-communication_ov75914&cm_mmca1=000039JL&cm_mmca2=10008917) account.
+- Register for an [IBM Cloud](https://w3.ibm.com/developer/tools/advocacy/event/5e9949590b4ad043617a8cfe) account.
 
 ## Estimated time
 
@@ -28,41 +28,53 @@ This tutorial takes about 40 minutes to complete.
 We show you how to create a chatbot using Watson Assistant, a tool that enables you to build conversational interfaces into any application, device, or channel.
 
 **Step 1.** From the [IBM Cloud catalog](https://cloud.ibm.com/catalog/services/watson-assistant), provision an an instance of **Watson Assistant**.
+  
   ![Watson Assistant Catalog](/starter-kit/assistant/WA-Photo1.png)
 
 **Step 2.**  Launch the Watson Assistant service.
 
 **Step 3.** Click **Create assistant** and follow [these detailed instructions](https://cloud.ibm.com/docs/assistant?topic=assistant-assistant-add) for how to create an assistant.
+  
   ![Watson Assistant Photo2 ](/starter-kit/assistant/WA-Photo2.png)
 
 **Step 4.** Name the Watson Assistant instance **COVID Crisis Communication**
+  
   ![Watson Assistant Photo3 ](/starter-kit/assistant/WA-Photo3.png)
 
 **Step 5.** Click **Add Dialog skill** to add this to your assistant. Follow [the documentation](https://cloud.ibm.com/docs/assistant?topic=assistant-skill-dialog-add) if you have questions.
+  
   ![Watson Assistant Photo4 ](/starter-kit/assistant/WA-Photo4.png)
 
 **Step 6.** Click **Import skill > Choose JSON file** and import the [`skill-CDC-COVID-FAQ.json`](./starter-kit/assistant/skill-CDC-COVID-FAQ.json) file.
+  
   ![Watson Assistant Photo5 ](/starter-kit/assistant/WA-Photo5.png)
 
 **Step 7.** Go back to the All Assistants page. From the action menu ( **`⋮`** ), open **Settings**.
+  
   ![Watson Assistant Photo6 ](/starter-kit/assistant/WA-Photo6.png)
 
 **Step 8.**  On the Settings tab, click **API Details** on the left and make a note of the `Assistant ID` and `Api Key` for future use.
+  
   ![Watson Assistant Photo7 ](/starter-kit/assistant/WA-Photo7.png)
 
 **Step 9.** Go back to the All Assistants page and click on the **Skills** link.
+  
   ![Watson Assistant Skills ](/starter-kit/assistant/WA-Skills.png)
 
 **Step 10.** On the Skill page, click on the action menu ( **`⋮`** ), open **View API Details**.
+  
   ![Watson Assistant Skill Properties](/starter-kit/assistant/WA-SkillAPIProperties.png)
 
 **Step 11.** On the Skill Details page, make note of the `Skill ID` for future use.
+  
   ![Watson Assistant Skill Details](/starter-kit/assistant/WA-SkillDetails.png)
 
 **Step 12.**  Go back to your dialog skill and click on the **Preview Link** button on the side to get a link to test and verify your assistant.
+  
   ![Watson Assistant Photo9 ](/starter-kit/assistant/WA-Photo91.png)
 
 **Step 13.** Ask the Watson Assistant chatbot some questions about COVID-19.
+
 <p align="center">
 <img width="50%" height="50%" src="https://raw.githubusercontent.com/Call-for-Code/Solution-Starter-Kit-Communication-2020/master/starter-kit/assistant/WA-Photo101.png">
 </p>
@@ -82,27 +94,29 @@ Our crisis communication chatbot uses two different sources:
 
 ## Defining webhooks
 
-A webhook is a mechanism that allows you to call out to an external program based on something happening in your program. When used in a dialog skill, a webhook is triggered when the assistant processes a node that has a webhook enabled. The webhook collects data that you specify or that you collect from the user during the conversation and save in context variables. It sends the data as part of a HTTP POST request to the URL that you specify as part of your webhook definition. The URL that receives the webhook is the listener. It performs a predefined action using the information that you pass to it as specified in the webhook definition, and can optionally return a response.
+A webhook is a mechanism that allows you to call out to an external program based on something happening in your program. When used in a dialog skill, a webhook is triggered when the assistant processes a node that has a webhook enabled. The webhook collects data that you specify or that you collect from the user during the conversation and save in context variables. 
+
+It sends the data as part of a HTTP POST request to the URL that you specify as part of your webhook definition. The URL that receives the webhook is the listener. It performs a predefined action using the information that you pass to it as specified in the webhook definition, and can optionally return a response.
 
 ## Make use of Discovery to get news information
 
-1. From your IBM Cloud account, go to Watson Discovery.
+**Step 1.**  From your IBM Cloud account, go to Watson Discovery.
 
 ![Discover Service](./starter-kit/webhook/images/discovery-service.png)
 
-2. Create a new lite service.
+**Step 2.**  Create a new lite service.
 
 ![Create Discover Service](./starter-kit/webhook/images/create-discovery-service.png)
 
-3. Make note of the API key and the URL. You need that in the next steps.
+**Step 3.**  Make note of the API key and the URL. You need that in the next steps.
 
 ![Credentials](./starter-kit/webhook/images/discovery-credentials.png)
 
-4. Open the Watson Discovery NEWS service, which is a prepopulated discovery dataset updated and maintained by the Watson Discovery team. 
+**Step 4.** Open the Watson Discovery NEWS service, which is a prepopulated discovery dataset updated and maintained by the Watson Discovery team. 
 
 ![Watson Discovery NEWS](./starter-kit/webhook/images/watson-discovery-news.png)
 
-5. From the top right corner, open the API tab. Make note of the Collection ID and Environment ID.
+**Step 5.** From the top right corner, open the API tab. Make note of the Collection ID and Environment ID.
 
 ![NEWS Api info](./starter-kit/webhook/images/news-api-info.png)
 
@@ -114,25 +128,25 @@ A webhook is a mechanism that allows you to call out to an external program base
 
 3. Save the API key for future use.
 
-### Creating Cloud Functions
+## Creating Cloud Functions
 
 1. In the IBM Cloud catalog, go to [IBM Cloud Functions](https://cloud.ibm.com/functions/).
 
 2. Click **Start Creating**.
 
-![functions](./starter-kit/webhook/images/cloud-functions.png)
+  ![functions](./starter-kit/webhook/images/cloud-functions.png)
 
 3. Select **Create Action**.
 
-![create](./starter-kit/webhook/images/create-action.png)
+  ![create](./starter-kit/webhook/images/create-action.png)
 
 4. Name your action. For the Runtime dropdown, select **Node.js 10**.
 
-![environment](./starter-kit/webhook/images/create-action-env.png)
+  ![environment](./starter-kit/webhook/images/create-action-env.png)
 
 5. Replace the code with [action/covid-webhook.js](./starter-kit/webhook/action/covid-webhook.js)
 
-![code](./starter-kit/webhook/images/code.png)
+  ![code](./starter-kit/webhook/images/code.png)
 
 6. Our code has two main parts. We decide whether to call the COVID-19 API or Watson Discovery based on a parameter sent on the function call. If a query param of `type=api` is set, you call the COVID-19 API on the [summary endpoint](https://api.covid19api.com/summary). 
 
