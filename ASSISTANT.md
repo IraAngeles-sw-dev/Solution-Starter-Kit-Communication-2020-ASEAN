@@ -91,8 +91,6 @@ Our crisis communication chatbot uses two different sources:
 
 - [Watson Discovery](https://www.ibm.com/cloud/watson-discovery)
 - [COVID-19 API](https://covid19api.com/)
-- [Weather Company Data](https://weather.com/coronavirus)
-
 
 ## Defining webhooks
 
@@ -192,12 +190,7 @@ It sends the data as part of a HTTP POST request to the URL that you specify as 
   }
   ```
 
-8. If you want to make a call to the Discovery service, you need to set some parameters that let you call the IAM-enabled service. On the left, click on the **Parameters** tab. Add the following parameters: 
-    - `api_key` (Discovery API Key)
-    - `twcApiKey` (API key from The Weather Company)
-    - `url` (Discovery Service URL)
-    - `collection_id`
-    - `env_id`
+8. If you want to make a call to the Discovery service, you need to set some parameters that lets you call the IAM-enabled service. On the left, click on the **Parameters** tab. Add the following parameters: `api_key`, `url`, `collection_id`, and `env_id`. These are the values you noted from the Watson Discovery service in the previous steps.
 
   ![parameters](./starter-kit/webhook/images/parameter.png)
 
