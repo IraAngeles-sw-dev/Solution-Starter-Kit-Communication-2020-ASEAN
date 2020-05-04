@@ -19,7 +19,7 @@ In this tutorial, you will:
 
 ## Prerequisites
 
-- Register for an [IBM Cloud](https://w3.ibm.com/developer/tools/advocacy/event/5e9949590b4ad043617a8cfe) account, if you do not have an account yet.
+- Register for an [IBM Cloud](https://ibm.biz/BdqfRf) account, if you do not have an account yet.
 - Install Node-RED [locally](https://nodered.org/docs/getting-started/) or [Create a Node-RED Starter application](https://developer.ibm.com/components/node-red/tutorials/how-to-create-a-node-red-starter-application/) in IBM Cloud
     - After Node-RED is installed, add the dependencies:
 

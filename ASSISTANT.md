@@ -17,7 +17,7 @@ In this tutorial, you will:
 
 ## Prerequisite
 
-- Register for an [IBM Cloud](https://w3.ibm.com/developer/tools/advocacy/event/5e9949590b4ad043617a8cfe) account.
+- Register for an [IBM Cloud](https://ibm.biz/BdqfRf) account.
 
 ## Estimated time
 
