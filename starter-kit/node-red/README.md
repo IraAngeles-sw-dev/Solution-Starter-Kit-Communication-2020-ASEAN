@@ -2,6 +2,12 @@
 
 Learn how to create a voice-enabled chatbot using Node-RED and the IBM Watson Assistant, Watson Speech to Text, and Watson Text to Speech services.
 
+## Authors
+
+- [John Walicki](https://developer.ibm.com/profiles/walicki/) - IBM
+- [Isaias Rafael Angeles](https://developer.ibm.com/profiles/isaias/) - IBM
+
+
 ## Learning objectives
 
 In this tutorial, you will:
