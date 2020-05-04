@@ -2,7 +2,7 @@
 
 This solution starter was created by technologists from IBM.  Translations are available: [JP](/README_JP.md)
 
-## ASEAN DEG TEAM
+## IBM Developer Ecosystem Group - ASEAN 
 
 - Zack Yeo - IBM
 - [Nuttapong Wong Aree](https://developer.ibm.com/profiles/wonganut/) - IBM
