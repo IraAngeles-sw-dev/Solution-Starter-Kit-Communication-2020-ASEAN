@@ -249,7 +249,7 @@ For detailed instructions on how to do this, check out our documentation: [Makin
 
 You can easily use webhooks to give your Watson Assistant access to many external APIs and databases.
 
-# Next steps
+## Next steps
 
 Now that you know how to create a COVID-19 chatbot and connect it to Watson Discovery and the COVID-19 API, there are a few different integration paths you can take. The following tutorials show you how to integrate this chatbot with Slack, with a simple web application, or with a Node-RED dashboard.
 
@@ -257,6 +257,6 @@ Now that you know how to create a COVID-19 chatbot and connect it to Watson Disc
 - [Integrate your COVID-19 chatbot with Slack](https://developer.ibm.com/tutorials/create-crisis-communication-chatbot-integrate-slack/)
 - [Integrate your COVID-19 chatbot with Node-RED to enable voice commands](https://developer.ibm.com/tutorials/create-a-voice-enabled-covid-19-chatbot-using-node-red/)
 
-# Take on COVID-19
+## Take on COVID-19
 
 You now know how to build a chatbot using Watson Assistant and connect it to Watson Discovery and a COVID-19 API data source that serves up timely information about this pandemic. It’s your turn to use these technologies to help tackle this pandemic and make a difference by accepting the [COVID-19 challenge](https://developer.ibm.com/callforcode/getstarted/covid-19/)!
