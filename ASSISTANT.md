@@ -17,7 +17,9 @@ In this tutorial, you will:
 
 ## Prerequisite
 
--Register for an [IBM Cloud](https://ibm.biz/BdqfRf) account.
+- Register for an [IBM Cloud](https://ibm.biz/BdqfRf) account.
+- [GitHub](https://github.com/) account for code repository
+- Download the code from this GitHub [repository](https://github.com/IraAngeles-IBM/Solution-Starter-Kit-Communication-2020-ASEAN)
 
 ## Estimated time
 
@@ -144,7 +146,7 @@ It sends the data as part of a HTTP POST request to the URL that you specify as 
 
   ![environment](./starter-kit/webhook/images/create-action-env.png)
 
-5. Replace the code with [action/covid-webhook.js](./starter-kit/webhook/action/covid-webhook.js)
+5. Replace the code with [action/covid-webhook.js](/starter-kit/webhook/action/covid-webhook.js)
 
   ![code](./starter-kit/webhook/images/code.png)
 
