@@ -120,13 +120,6 @@ It sends the data as part of a HTTP POST request to the URL that you specify as 
 
 ![NEWS Api info](./starter-kit/webhook/images/news-api-info.png)
 
-### Get a Weather Company API Key
-
-1. Go to [https://callforcode.weather.com/register/](https://callforcode.weather.com/register/)
-
-2. Signup with your info. Your API key will be emailed to you.
-
-3. Save the API key for future use.
 
 ## Creating Cloud Functions
 
