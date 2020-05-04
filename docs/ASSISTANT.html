@@ -292,12 +292,14 @@
  ]
 }
 </code></pre></li>
-<li><p>If there is specific location (Country/Country Code/US State) selected, you look for that location either using The Weather Company API or in the summary response and return the status for that location.</p>
-<p>For example, the response for <code>type=api</code> and <code>location=United States of America</code> is shown below.</p>
-<pre><code>{
- &quot;result&quot;: &quot;Total Cases: 65778\nTotal Deaths: 942\nTotal Recovered: 361\n\nSource: Johns Hopkins CSSE&quot;
-}
-</code></pre></li>
+<li><p>You then parse through the list of summaries for each country and sum up to get combined stats. If there is specific country selected, you look for that country in the summary response and return the , status for that country.</p>
+</li>
+</ol>
+<p>For example, the response for <code>type=api</code> and <code>country=US</code> is shown below.</p>
+<pre><code>  {
+    &quot;result&quot;: &quot;Total Cases: 65778\nTotal Deaths: 942\nTotal Recovered: 361\n\nSource: Johns Hopkins CSSE&quot;
+  }
+</code></pre><ol>
 <li><p>If you want to make a call to the Discovery service, you need to set some parameters that lets you call the IAM-enabled service. On the left, click on the <strong>Parameters</strong> tab. Add the following parameters: <code>api_key</code>, <code>url</code>, <code>collection_id</code>, and <code>env_id</code>. These are the values you noted from the Watson Discovery service in the previous steps.</p>
 <p><img src="starter-kit/webhook/images/parameter.png" alt="parameters"></p>
 </li>
@@ -391,7 +393,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Create a crisis communication chatbot and connect it to news and COVID-19 data sources","level":"1.2","depth":1,"next":{"title":"Create a voice-enabled COVID-19 chatbot using Node-RED","level":"1.3","depth":1,"path":"starter-kit/node-red/Node-RED-chatbot.md","ref":"starter-kit/node-red/Node-RED-chatbot.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"CRISIS-COMMUNICATION.md","ref":"CRISIS-COMMUNICATION.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"CRISIS-COMMUNICATION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ASSISTANT.md","mtime":"2020-05-04T08:29:22.222Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T08:29:46.067Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create a crisis communication chatbot and connect it to news and COVID-19 data sources","level":"1.2","depth":1,"next":{"title":"Create a voice-enabled COVID-19 chatbot using Node-RED","level":"1.3","depth":1,"path":"starter-kit/node-red/Node-RED-chatbot.md","ref":"starter-kit/node-red/Node-RED-chatbot.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"CRISIS-COMMUNICATION.md","ref":"CRISIS-COMMUNICATION.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"CRISIS-COMMUNICATION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ASSISTANT.md","mtime":"2020-05-04T08:34:05.039Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T08:34:34.939Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
