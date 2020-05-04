@@ -245,3 +245,4 @@ Now that you know how to create a COVID-19 chatbot and connect it to Watson Disc
 ## Take on COVID-19
 
 You now know how to build a chatbot using Watson Assistant and connect it to Watson Discovery and a COVID-19 API data source that serves up timely information about this pandemic. It’s your turn to use these technologies to help tackle this pandemic and make a difference by accepting the [COVID-19 challenge](https://developer.ibm.com/callforcode/getstarted/covid-19/)!
+
