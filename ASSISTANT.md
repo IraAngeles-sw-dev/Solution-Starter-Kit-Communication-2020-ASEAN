@@ -17,7 +17,7 @@ In this tutorial, you will:
 
 ## Prerequisite
 
-- Register for an [IBM Cloud](https://ibm.biz/BdqfRf) account.
+-Register for an [IBM Cloud](https://ibm.biz/BdqfRf) account.
 
 ## Estimated time
 
