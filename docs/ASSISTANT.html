@@ -273,99 +273,87 @@
 <p><img src="starter-kit/webhook/images/code.png" alt="code"></p>
 </li>
 <li><p>Our code has two main parts. We decide whether to call the COVID-19 API or Watson Discovery based on a parameter sent on the function call. If a query param of <code>type=api</code> is set, you call the COVID-19 API on the <a href="https://api.covid19api.com/summary" target="_blank">summary endpoint</a>. </p>
-</li>
-</ol>
 <p>It returns the data in the following format:</p>
 <pre><code>{
-  Countries: [
-    {
-      Country: &quot;&quot;,
-      Slug: &quot;&quot;,
-      NewConfirmed: 0,
-      TotalConfirmed: 0,
-      NewDeaths: 0,
-      TotalDeaths: 0,
-      NewRecovered: 0,
-      TotalRecovered: 0
-    },
-    {
-      Country: &quot; Azerbaijan&quot;,
-      Slug: &quot;-azerbaijan&quot;,
-      NewConfirmed: 0,
-      TotalConfirmed: 0,
-      NewDeaths: 0,
-      TotalDeaths: 0,
-      NewRecovered: 0,
-      TotalRecovered: 0
-    },
-    ...
-  ]
+ Countries: [
+   {
+     Country: &quot;&quot;,
+     Slug: &quot;&quot;,
+     NewConfirmed: 0,
+     TotalConfirmed: 0,
+     NewDeaths: 0,
+     TotalDeaths: 0,
+     NewRecovered: 0,
+     TotalRecovered: 0
+   },
+   {
+     Country: &quot; Azerbaijan&quot;,
+     Slug: &quot;-azerbaijan&quot;,
+     NewConfirmed: 0,
+     TotalConfirmed: 0,
+     NewDeaths: 0,
+     TotalDeaths: 0,
+     NewRecovered: 0,
+     TotalRecovered: 0
+   },
+   ...
+ ]
 }
-</code></pre><ol>
-<li>If there is specific location (Country/Country Code/US State) selected, you look for that location either using The Weather Company API or in the summary response and return the status for that location.</li>
-</ol>
+</code></pre></li>
+<li><p>If there is specific location (Country/Country Code/US State) selected, you look for that location either using The Weather Company API or in the summary response and return the status for that location.</p>
 <p>For example, the response for <code>type=api</code> and <code>location=United States of America</code> is shown below.</p>
 <pre><code>{
-  &quot;result&quot;: &quot;Total Cases: 65778\nTotal Deaths: 942\nTotal Recovered: 361\n\nSource: Johns Hopkins CSSE&quot;
+ &quot;result&quot;: &quot;Total Cases: 65778\nTotal Deaths: 942\nTotal Recovered: 361\n\nSource: Johns Hopkins CSSE&quot;
 }
-</code></pre><ol>
-<li>If you want to make a call to the Discovery service, you need to set some parameters that let you call the IAM-enabled service. On the left, click on the <strong>Parameters</strong> tab. Add the following parameters: <ul>
+</code></pre></li>
+<li><p>If you want to make a call to the Discovery service, you need to set some parameters that let you call the IAM-enabled service. On the left, click on the <strong>Parameters</strong> tab. Add the following parameters: </p>
+<ul>
 <li><code>api_key</code> (Discovery API Key)</li>
 <li><code>twcApiKey</code> (API key from The Weather Company)</li>
 <li><code>url</code> (Discovery Service URL)</li>
 <li><code>collection_id</code></li>
 <li><code>env_id</code></li>
 </ul>
+<p><img src="starter-kit/webhook/images/parameter.png" alt="parameters"></p>
+</li>
+<li><p>Enable the action as a web action. To do so, select the <strong>Endpoints</strong> tab on the left. Click the checkbox beside &quot;Enable as Web Action.&quot;</p>
+<p><img src="starter-kit/webhook/images/endpoint.png" alt="endpoint"></p>
+</li>
+<li><p>Make note of the HTTP URL. You will use this as the webhook for your assistant. You will have to add <code>.json</code> in the end of this url to make it work as a webhook.</p>
+<p><img src="starter-kit/webhook/images/http-endpoint.png" alt="http endpoint"></p>
 </li>
 </ol>
-<p><img src="starter-kit/webhook/images/parameter.png" alt="parameters"></p>
-<ol>
-<li>Enable the action as a web action. To do so, select the <strong>Endpoints</strong> tab on the left. Click the checkbox beside &quot;Enable as Web Action.&quot;</li>
-</ol>
-<p><img src="starter-kit/webhook/images/endpoint.png" alt="endpoint"></p>
-<ol>
-<li>Make note of the HTTP URL. You will use this as the webhook for your assistant. You will have to add <code>.json</code> in the end of this url to make it work as a webhook.</li>
-</ol>
-<p><img src="starter-kit/webhook/images/http-endpoint.png" alt="http endpoint"></p>
-<h3 id="integrate-data-sources-via-a-watson-assistant-webhook">Integrate data sources via a Watson Assistant webhook</h3>
+<h2 id="integrate-data-sources-via-a-watson-assistant-webhook">Integrate data sources via a Watson Assistant webhook</h2>
 <ul>
 <li><p>For detailed instructions on how to do this, check out our documentation: <a href="https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-webhooks" target="_blank">Making Programmatic Calls from Watson Assistant</a>.</p>
 </li>
 <li><p>Bring up the COVID-19 assistant you created earlier. Find it in your IBM Cloud account under services &gt; IBM Watson Assistant. Open the dialog by clicking the <code>CDC COVID FAQ</code> Dialog.</p>
-</li>
-</ul>
 <p><img src="starter-kit/webhook/images/assistant.png" alt="assistant"></p>
-<ol>
-<li>Click on <strong>Options</strong> on the left.</li>
-</ol>
+</li>
+<li><p>Click on <strong>Options</strong> on the left.</p>
 <p><img src="starter-kit/webhook/images/options.png" alt="options"></p>
-<ol>
-<li>Under Options &gt; Webhooks, in the URL text box, paste the URL from the Cloud Funciton step. Make sure to add a <code>.json</code> at the end of the URL.</li>
-</ol>
+</li>
+<li><p>Under Options &gt; Webhooks, in the URL text box, paste the URL from the Cloud Funciton step. Make sure to add a <code>.json</code> at the end of the URL.</p>
 <p><img src="starter-kit/webhook/images/add-url.png" alt="url"></p>
-<ol>
-<li>Select <strong>Dialog</strong> on the left navigation.</li>
-</ol>
+</li>
+<li><p>Select <strong>Dialog</strong> on the left navigation.</p>
 <p><img src="starter-kit/webhook/images/dialog.png" alt="dialog"></p>
-<ol>
+</li>
 <li><p>Open up any dialog node you want to add a webhook call for. </p>
 </li>
 <li><p>After selecting the node, click <strong>Customize</strong>.</p>
-</li>
-</ol>
 <p><img src="starter-kit/webhook/images/customize.png" alt="customize"></p>
-<ol>
-<li>Enable Webhooks by moving the toggle button to <strong>On</strong> in the Webhooks section. Click <strong>Save</strong>.</li>
-</ol>
+</li>
+<li><p>Enable Webhooks by moving the toggle button to <strong>On</strong> in the Webhooks section. Click <strong>Save</strong>.</p>
 <p><img src="starter-kit/webhook/images/enable-webhook.png" alt="webhooks"></p>
-<ol>
-<li>Add any parameter your webhook needs. These will be sent as query parameters.</li>
-</ol>
+</li>
+<li><p>Add any parameter your webhook needs. These will be sent as query parameters.</p>
 <p><img src="starter-kit/webhook/images/webhook-parameter.png" alt="webhook parameters"></p>
-<ol>
-<li>Test that your webhook integration is working by going to the Try It tab and initiating a dialog that calls the webhook.</li>
-</ol>
+</li>
+<li><p>Test that your webhook integration is working by going to the Try It tab and initiating a dialog that calls the webhook.</p>
 <p><img src="starter-kit/webhook/images/webhook-test.png" alt="webhook test"></p>
+</li>
+</ul>
 <p>You can easily use webhooks to give your Watson Assistant access to many external APIs and databases.</p>
 <h1 id="next-steps">Next steps</h1>
 <p>Now that you know how to create a COVID-19 chatbot and connect it to Watson Discovery and the COVID-19 API, there are a few different integration paths you can take. The following tutorials show you how to integrate this chatbot with Slack, with a simple web application, or with a Node-RED dashboard.</p>
@@ -419,7 +407,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Create a crisis communication chatbot and connect it to news and COVID-19 data sources","level":"1.2","depth":1,"next":{"title":"Create a voice-enabled COVID-19 chatbot using Node-RED","level":"1.3","depth":1,"path":"starter-kit/node-red/Node-RED-chatbot.md","ref":"starter-kit/node-red/Node-RED-chatbot.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"CRISIS-COMMUNICATION.md","ref":"CRISIS-COMMUNICATION.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"CRISIS-COMMUNICATION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ASSISTANT.md","mtime":"2020-05-04T05:40:18.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T05:42:32.760Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create a crisis communication chatbot and connect it to news and COVID-19 data sources","level":"1.2","depth":1,"next":{"title":"Create a voice-enabled COVID-19 chatbot using Node-RED","level":"1.3","depth":1,"path":"starter-kit/node-red/Node-RED-chatbot.md","ref":"starter-kit/node-red/Node-RED-chatbot.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"CRISIS-COMMUNICATION.md","ref":"CRISIS-COMMUNICATION.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"CRISIS-COMMUNICATION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ASSISTANT.md","mtime":"2020-05-04T05:48:39.070Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T05:49:19.676Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
