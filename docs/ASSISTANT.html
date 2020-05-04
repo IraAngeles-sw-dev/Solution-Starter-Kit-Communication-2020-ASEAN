@@ -1,0 +1,450 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Create a crisis communication chatbot and connect it to news and COVID-19 data sources · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="starter-kit/node-red/Node-RED-chatbot.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Call for Code 2020 Crisis Communication Starter kit</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="ASSISTANT.html">
+            
+                <a href="ASSISTANT.html">
+            
+                    
+                    Create a crisis communication chatbot and connect it to news and COVID-19 data sources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="starter-kit/node-red/Node-RED-chatbot.html">
+            
+                <a href="starter-kit/node-red/Node-RED-chatbot.html">
+            
+                    
+                    Create a voice-enabled COVID-19 chatbot using Node-RED
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Create a crisis communication chatbot and connect it to news and COVID-19 data sources</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="covid-crisis-communications-starter-kit">COVID Crisis Communications Starter Kit</h1>
+<p>This solution starter was created by technologists from IBM.  Translations are available: <a href="README_JP.md">JP</a></p>
+<h2 id="authors">Authors</h2>
+<ul>
+<li><a href="https://developer.ibm.com/profiles/dkbyron/" target="_blank">Donna Byron</a> - IBM</li>
+<li><a href="https://developer.ibm.com/profiles/walicki/" target="_blank">John Walicki</a> - IBM</li>
+<li><a href="https://developer.ibm.com/profiles/pricem/" target="_blank">Matt Price</a> - IBM</li>
+<li><a href="https://developer.ibm.com/profiles/mofizur.rahman" target="_blank">Mofizur Rahman</a> - IBM</li>
+<li><a href="https://developer.ibm.com/profiles/pmistry/" target="_blank">Pooja Mistry</a> - IBM</li>
+<li><a href="https://developer.ibm.com/profiles/ulidder/" target="_blank">Upkar Lidder</a> - IBM</li>
+</ul>
+<h2 id="contents">Contents</h2>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#the-idea">The idea</a></li>
+<li><a href="#how-it-works">How it works</a></li>
+<li><a href="#diagrams">Diagrams</a></li>
+<li><a href="#documents">Documents</a></li>
+<li><a href="#datasets">Datasets</a></li>
+<li><a href="#technology">Technology</a></li>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#resources">Resources</a>
+10.<a href="#license">License</a></li>
+</ol>
+<h2 id="overview">Overview</h2>
+<h3 id="whats-the-problem">What&apos;s the problem?</h3>
+<p>In times of crisis, communications systems are often overwhelmed with people trying to find basic information about testing, symptoms, community response, and other resources. When communication lines get clogged, people who need real help can&apos;t get through. Chatbots help respond to tens, even hundreds, of thousands of messages a day.</p>
+<h3 id="how-can-technology-help-">How can technology help ?</h3>
+<p>Whether via text, phone, websites, or communication apps, conversing with chatbots and other AI-enabled resources can play a critical role in helping communities quickly understand crucial information and free up customer service resources to focus on higher-level issues.</p>
+<p>IBM Watson Assistant service helps you build, train, and deploy conversational interactions into any application, device, or channel. Creating a chatbot using Watson Assistant can help address the issues that our users face while trying to gather accurate, relevant information. Whether you&apos;re trying to learn the latest news about Covid-19 or learn where there&apos;s testing in your area, a chatbot can play a major role in helping communities quickly understand crucial information and free up customer service resources to focus on higher-level issues.</p>
+<h2 id="video">Video</h2>
+<p><a href="https://www.youtube.com/watch?v=WzEj_m0hwF0" target="_blank"><img src="https://img.youtube.com/vi/WzEj_m0hwF0/0.jpg" alt="Call for Code Solution Starter: Water sustainability in the context of climate change "></a></p>
+<h2 id="the-idea">The idea</h2>
+<p>COVID-19 has citizens looking for answers about symptoms and testing sites as well as current status of schools, transportation, and other public services. Using Watson Assistant, this Call for Code Starter Kit has designed a virtual assistant pre-loaded to understand and respond to common questions about COVID-19, scan COVID-19 news articles using Watson Discovery and respond to COVID statistics inquires with data from trusted sources.</p>
+<p>With this Watson Assistant powered Crisis Communications Starter Kit you can integrate a chatbot into your Call for Code solution in an IBM Cloud hosted web server, using a Slack integration or via a Node-RED Dashboard. </p>
+<p>It can:</p>
+<ul>
+<li>Respond by sharing consistent, accurate COVID-19 information</li>
+<li>Help citizens quickly and easily access the latest information through their channel of choice &#x2013; voice, text or collaborative tool</li>
+<li>Free valuable resources by automating answers to common COVID-19 questions</li>
+<li>Dynamically update information with the latest developments and recommendations</li>
+</ul>
+<p>The challenge for you is to build out from this framework to create a more complete solution.</p>
+<h2 id="how-it-works">How it works</h2>
+<h2 id="diagrams">Diagrams</h2>
+<h3 id="website-integration-with-covid-19-crisis-communication-chatbot">Website integration with COVID-19 crisis communication chatbot</h3>
+<p><img src="images/Crisis-Comms-Architecture-Nodejs-WebServer.png" alt="Crisis Comms Architecture diagram"></p>
+<ol>
+<li>User visits a website with the COVID-19 chatbot and asks a question.</li>
+<li>Node.js web server calls the Watson Assistant service hosted in IBM Cloud.</li>
+<li>Watson Assistant uses natural language understanding and machine learning to extract entities and intents of the user question.</li>
+<li>Source COVID-19 FAQ information from trusted CDC data.</li>
+<li>Watson Assistant invokes an OpenWhisk open source powered IBM Cloud Function.</li>
+<li>IBM Cloud Function calls the Watson Discovery service running in IBM Cloud.</li>
+<li>Watson Discovery scans news articles and responds with relevant articles.</li>
+<li>Watson Assistant invokes an OpenWhisk open source powered IBM Cloud Function.</li>
+<li>IBM Cloud Function calls the COVID-19 API to get statistics.</li>
+<li>Watson Assistant replies to the user inquiry.</li>
+<li>Node.js web server displays the chat answer to the user.</li>
+</ol>
+<h3 id="slack-integration-with-covid-19-crisis-communication-chatbot">Slack integration with COVID-19 crisis communication chatbot</h3>
+<p><img src="images/Crisis-Comms-Architecture-Slack-Integration.png" alt="Crisis Comms Architecture diagram"></p>
+<ol>
+<li>User invokes a COVID-19 Slack integration chatbot app and asks a question.</li>
+<li>Slack app calls the Watson Assistant service hosted in IBM Cloud.</li>
+<li>Watson Assistant uses natural language understanding and machine learning to extract entities and intents of the user question.</li>
+<li>Source COVID-19 FAQ information from trusted CDC data</li>
+<li>Watson Assistant invokes an OpenWhisk open source powered IBM Cloud Function.</li>
+<li>IBM Cloud Function calls the Watson Discovery service running in IBM Cloud.</li>
+<li>Watson Discovery scans news articles and responds with relevant articles.</li>
+<li>Watson Assistant invokes an OpenWhisk open source powered IBM Cloud Function.</li>
+<li>IBM Cloud Function calls the COVID-19 API to get statistics.</li>
+<li>Watson Assistant replies to the Slack application.</li>
+<li>Slack app displays the chat answer to the user.</li>
+</ol>
+<h3 id="voice-enabled-covid-19-crisis-communication-chatbot-using-node-red">Voice enabled COVID-19 crisis communication chatbot using Node-RED</h3>
+<p><img src="images/Crisis-Comms-Architecture-Node-RED.png" alt="Crisis Comms Architecture diagram"></p>
+<ol>
+<li>User visits a voice-enabled Node-RED website with the COVID-19 chatbot and asks a question.</li>
+<li>Node-RED records the speech wav file and calls the Watson Speech to Text service hosted in IBM Cloud.</li>
+<li>Watson Speech to Text uses machine learning to decode the user&apos;s speech.</li>
+<li>Watson Speech to Text replies with a transcript of the COVID-19 question and Node-RED calls Watson Assistant service hosted in IBM Cloud.</li>
+<li>Watson Assistant uses natural language understanding and machine learning to extract entities and intents of the user&apos;s question.</li>
+<li>Source COVID-19 FAQ information from trusted CDC data</li>
+<li>Watson Assistant invokes an OpenWhisk open source powered IBM Cloud Function.</li>
+<li>IBM Cloud Function calls the Watson Discovery service running in IBM Cloud.</li>
+<li>Watson Discovery scans news articles and responds with relevant articles.</li>
+<li>Watson Assistant invokes an OpenWhisk open source powered IBM Cloud Function.</li>
+<li>IBM Cloud Function calls the COVID-19 API to get statistics.</li>
+<li>Watson Assistant replies to the user inquiry and Node-RED sends the text transcript to Watson Text to Speech.</li>
+<li>Watson Text to Speech encodes the message in the user&apos;s language.</li>
+<li>Node-RED plays the chat answer wav file to the user.</li>
+<li>User listens to the chat answer.</li>
+</ol>
+<h2 id="documents">Documents</h2>
+<h3 id="trusted-sources-for-covid-19-information">Trusted sources for COVID-19 information</h3>
+<ul>
+<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html" target="_blank">CDC COVID-19 FAQ</a></li>
+</ul>
+<h3 id="tutorials-and-documentation">Tutorials and documentation:</h3>
+<ul>
+<li><a href="https://www.ibm.com/watson/how-to-build-a-chatbot" target="_blank">How-to guides for chatbots</a></li>
+<li><a href="https://developer.ibm.com/series/learning-path-watson-assistant/" target="_blank">Learning path: Getting started with Watson Assistant</a></li>
+<li><a href="https://github.com/IBM/watson-discovery-sdu-with-assistant" target="_blank">Chatbot with Watson Discovery</a></li>
+<li><a href="https://cloud.ibm.com/docs/assistant?topic=assistant-deploy-slack" target="_blank">Chat Bot Slack Deployment</a></li>
+<li><a href="https://www.ibm.com/cloud/blog/create-a-chatbot-on-ibm-cloud-and-integrate-with-slack-part-1" target="_blank">Node-RED Slack Integration</a></li>
+<li><a href="https://developer.ibm.com/patterns/customize-and-continuously-train-your-own-watson-speech-service/" target="_blank">Train a speech-to-text model</a></li>
+<li><a href="https://cloud.ibm.com/docs/assistant?topic=assistant-dialog-webhooks" target="_blank">Making Programmatic Calls from Watson Assistant</a></li>
+<li><a href="https://developer.ibm.com/recipes/tutorials/ibms-voice-agent-with-watson-and-twilio/" target="_blank">IBM Cloud Voice Agent with Twilio</a></li>
+<li><a href="https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started" target="_blank">Watson Assistant</a></li>
+</ul>
+<h2 id="datasets">Datasets</h2>
+<ul>
+<li><a href="https://covid19api.com/" target="_blank">covid19api</a></li>
+</ul>
+<h2 id="technology">Technology</h2>
+<h3 id="ibm-technology">IBM technology</h3>
+<ul>
+<li><a href="https://www.ibm.com/cloud/watson-assistant/" target="_blank">IBM Watson Assistant</a></li>
+<li><a href="https://www.ibm.com/cloud/watson-discovery" target="_blank">Watson Discovery</a></li>
+<li><a href="https://www.ibm.com/cloud/watson-speech-to-text" target="_blank">Watson Speech to Text</a></li>
+<li><a href="https://www.ibm.com/cloud/watson-text-to-speech" target="_blank">Watson Text to Speech</a></li>
+<li><a href="https://cloud.ibm.com/functions/" target="_blank">IBM Cloud Functions</a></li>
+</ul>
+<h3 id="open-source-technology">Open source technology</h3>
+<ul>
+<li><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
+<li><a href="https://openwhisk.apache.org/" target="_blank">Apache OpenWhisk</a></li>
+<li><a href="https://nodered.org/" target="_blank">Node-RED</a></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="prerequisite">Prerequisite</h3>
+<ul>
+<li>Register for an <a href="https://www.ibm.com/account/reg/us-en/signup?formid=urx-42793&amp;eventid=cfc-2020?cm_mmc=OSocial_Blog-_-Audience+Developer_Developer+Conversation-_-WW_WW-_-cfc-2020-ghub-starterkit-communication_ov75914&amp;cm_mmca1=000039JL&amp;cm_mmca2=10008917" target="_blank">IBM Cloud</a> account.</li>
+</ul>
+<h3 id="set-up-an-instance-of-watson-assistant">Set up an instance of Watson Assistant</h3>
+<p>Log in to IBM Cloud and provision a Watson Assistant instance.</p>
+<p><strong>Step 1.</strong> From the <a href="https://cloud.ibm.com/catalog/services/watson-assistant" target="_blank">IBM Cloud catalog</a>, provision an an instance of <strong>Watson Assistant</strong>.
+  <img src="starter-kit/assistant/WA-Photo1.png" alt="Watson Assistant Catalog"></p>
+<p><strong>Step 2.</strong>  Launch the Watson Assistant service.</p>
+<p><strong>Step 3.</strong> Click <strong>Create assistant</strong> and follow <a href="https://cloud.ibm.com/docs/assistant?topic=assistant-assistant-add" target="_blank">these detailed instructions</a> for how to create an assistant.
+  <img src="starter-kit/assistant/WA-Photo2.png" alt="Watson Assistant Photo2 "></p>
+<p><strong>Step 4.</strong> Name the Watson Assistant instance <strong>COVID Crisis Communication</strong>
+  <img src="starter-kit/assistant/WA-Photo3.png" alt="Watson Assistant Photo3 "></p>
+<p><strong>Step 5.</strong> Click <strong>Add Dialog skill</strong> to add this to your assistant. Follow <a href="https://cloud.ibm.com/docs/assistant?topic=assistant-skill-dialog-add" target="_blank">the documentation</a> if you have questions.
+  <img src="starter-kit/assistant/WA-Photo4.png" alt="Watson Assistant Photo4 "></p>
+<p><strong>Step 6.</strong> Click <strong>Import skill &gt; Choose JSON file</strong> and import the <a href="starter-kit/assistant/skill-CDC-COVID-FAQ.json"><code>skill-CDC-COVID-FAQ.json</code></a> file.
+  <img src="starter-kit/assistant/WA-Photo5.png" alt="Watson Assistant Photo5 "></p>
+<p><strong>Step 7.</strong> Go back to the All Assistants page. From the action menu ( <strong><code>&#x22EE;</code></strong> ), open <strong>Settings</strong>.
+  <img src="starter-kit/assistant/WA-Photo6.png" alt="Watson Assistant Photo6 "></p>
+<p><strong>Step 8.</strong>  On the Settings tab, click <strong>API Details</strong> on the left and make a note of the <code>Assistant ID</code> and <code>Api Key</code> for future use.
+  <img src="starter-kit/assistant/WA-Photo7.png" alt="Watson Assistant Photo7 "></p>
+<p><strong>Step 9.</strong> Go back to the All Assistants page and click on the <strong>Skills</strong> link.
+  <img src="starter-kit/assistant/WA-Skills.png" alt="Watson Assistant Skills "></p>
+<p><strong>Step 10.</strong> On the Skill page, click on the action menu ( <strong><code>&#x22EE;</code></strong> ), open <strong>View API Details</strong>.
+  <img src="starter-kit/assistant/WA-SkillAPIProperties.png" alt="Watson Assistant Skill Properties"></p>
+<p><strong>Step 11.</strong> On the Skill Details page, make note of the <code>Skill ID</code> for future use.
+  <img src="starter-kit/assistant/WA-SkillDetails.png" alt="Watson Assistant Skill Details"></p>
+<p><strong>Step 12.</strong>  Go back to your dialog skill and click on the <strong>Preview Link</strong> button on the side to get a link to test and verify your assistant.
+  <img src="starter-kit/assistant/WA-Photo91.png" alt="Watson Assistant Photo9 "></p>
+<p><strong>Step 13.</strong> Ask the Watson Assistant chatbot some questions about COVID-19.</p>
+<p align="center">
+<img width="50%" height="50%" src="https://raw.githubusercontent.com/Call-for-Code/Solution-Starter-Kit-Communication-2020/master/starter-kit/assistant/WA-Photo101.png">
+</p>
+
+
+<h3 id="connect-your-chatbot-to-data-sources-via-a-webhook">Connect your chatbot to data sources via a webhook</h3>
+<p>Now that you&#x2019;ve created your Watson Assistant-enabled chatbot, you need to connect it to a data source. With Watson Assistant, you need to do this via a webhook.</p>
+<p>A webhook is a mechanism that allows you to call out to an external program based on something happening in your program. When used in a dialog skill, a webhook is triggered when the assistant processes a node that has a webhook enabled. The webhook collects data that you specify or that you collect from the user during the conversation and save in context variables. It sends the data as part of a HTTP POST request to the URL that you specify as part of your webhook definition. The URL that receives the webhook is the listener. It performs a predefined action using the information that you pass to it as specified in the webhook definition, and can optionally return a response.</p>
+<p><a href="starter-kit/webhook/README.md">Follow these instructions for setting up webhook</a> with the Watson Assistant chatbot you just provisioned.</p>
+<h3 id="integrate-your-covid-19-chatbot-with-slack">Integrate your COVID-19 chatbot with Slack</h3>
+<p>Now that you have a functioning Watson Assistant, let&apos;s deploy it to Slack. Slack is a cloud-based messaging application that helps people collaborate with one another. After you configure a dialog skill and add it to an assistant, you can integrate the assistant with Slack.</p>
+<p>When integrated, depending on the events that you configure the assistant to support, your assistant can respond to questions that are asked in direct messages or in channels where the assistant is directly mentioned.</p>
+<p><a href="starter-kit/slack/README.md">Read these instructions</a> to learn how to integrate your COVID-19 chatbot with Slack.</p>
+<p><img src="starter-kit/slack/readme_images/Slack.gif" alt="Slack Gif"></p>
+<h3 id="integrate-your-covid-19-chatbot-with-node-red">Integrate your COVID-19 chatbot with Node-RED</h3>
+<p>Want to create a voice-enabled chatbot? This tutorial teaches you how to <a href="starter-kit/node-red/README.md">create a voice enabled chatbot using Node-RED</a> and the Watson Assistant, Watson Speech to Text, and Watson Text to Speech nodes.</p>
+<h3 id="embed-your-covid-19-chatbot-on-a-nodejs-website">Embed your COVID-19 chatbot on a Node.js website</h3>
+<p>Finally, you can embed your COVID-19 crisis communication chatbot on a Node.js website.</p>
+<ul>
+<li>Follow the <a href="starter-kit/covid-simple/README.md">COVID-Simple installation instructions</a></li>
+</ul>
+<h2 id="disclosures">Disclosures</h2>
+<p>This tool is intended to provide information based on currently available CDC and other public information to help you make decisions about seeking appropriate medical care. This system is not intended for the diagnosis or treatment of disease or other conditions, including COVID-19, and you should not provide any personally identifying or private health information.</p>
+<p>This Watson Assistant bot is populated with data that is sourced from the following resources:</p>
+<ul>
+<li>Most static responses provide information found on the CDC&apos;s COVID FAQ Page: <a href="https://www.cdc.gov/coronavirus/2019-ncov/faq.html" target="_blank">https://www.cdc.gov/coronavirus/2019-ncov/faq.html</a></li>
+<li>Dynamic infection and death counts are sourced from Johns Hopkins University via the following API: <a href="https://www.covid19api.com/" target="_blank">https://www.covid19api.com/</a></li>
+<li>Dynamic news stories are sourced from Watson Discovery&apos;s news feed. Additional information on that service can be found here: <a href="https://www.ibm.com/watson/services/discovery-news/" target="_blank">https://www.ibm.com/watson/services/discovery-news/</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p>This solution starter is made available under the <a href="LICENSE">Apache 2 License</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="starter-kit/node-red/Node-RED-chatbot.html" class="navigation navigation-next " aria-label="Next page: Create a voice-enabled COVID-19 chatbot using Node-RED">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Create a crisis communication chatbot and connect it to news and COVID-19 data sources","level":"1.2","depth":1,"next":{"title":"Create a voice-enabled COVID-19 chatbot using Node-RED","level":"1.3","depth":1,"path":"starter-kit/node-red/Node-RED-chatbot.md","ref":"starter-kit/node-red/Node-RED-chatbot.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"CRISIS-COMMUNICATION.md","ref":"CRISIS-COMMUNICATION.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"CRISIS-COMMUNICATION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ASSISTANT.md","mtime":"2020-05-04T03:08:00.368Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-04T03:40:35.618Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
