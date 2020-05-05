@@ -4,6 +4,14 @@ In times of crisis, chatbots can help people quickly find answers they need to c
 
 This tutorial shows you how to create a crisis communication chatbot using IBM® Watson™ Assistant and how to add webhooks to Watson Assistant to query for dynamic data using Watson Discovery and COVID-19 APIs.
 
+## Authors
+
+- [Donna Byron](https://developer.ibm.com/profiles/dkbyron/) - IBM
+- [Matt Price](https://developer.ibm.com/profiles/pricem/) - IBM
+- [Mofizur Rahman](https://developer.ibm.com/profiles/mofizur.rahman) - IBM
+- [Pooja Mistry](https://developer.ibm.com/profiles/pmistry/) - IBM
+
+
 ## Learning objectives
 
 In this tutorial, you will:
