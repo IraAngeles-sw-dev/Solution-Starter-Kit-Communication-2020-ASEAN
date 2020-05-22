@@ -2,6 +2,10 @@
 
 In times of crisis, chatbots can help people quickly find answers they need to critical questions. In the case of a pandemic like COVID-19, people might be trying to find basic information about testing, symptoms, community response, and other resources.
 
+## Video
+
+[![Call for Code Solution Starter: Water sustainability in the context of climate change ](https://img.youtube.com/vi/2bDFYYMqv_g/hqdefault.jpg)](https://youtu.be/2bDFYYMqv_g)
+
 This tutorial shows you how to create a crisis communication chatbot using IBM® Watson™ Assistant and how to add webhooks to Watson Assistant to query for dynamic data using Watson Discovery and COVID-19 APIs.
 
 ## Authors
